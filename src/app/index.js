@@ -1,8 +1,8 @@
-import yeoman from 'yeoman-generator';
+import { Base } from 'yeoman-generator';
 import chalk from 'chalk';
 import yosay from 'yosay';
 
-export default yeoman.generators.Base.extend({
+module.exports = Base.extend({
   prompting() {
     const done = this.async();
 

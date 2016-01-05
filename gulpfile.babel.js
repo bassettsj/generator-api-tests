@@ -69,5 +69,5 @@ gulp.task('coveralls', ['test'], () => gulp.src(path.join(__dirname, 'coverage/l
     .pipe(coveralls())
 );
 
-gulp.task('prepublish', ['nsp']);
+gulp.task('prepublish', ['build', 'nsp']);
 gulp.task('default', ['static', 'test', 'coveralls']);
