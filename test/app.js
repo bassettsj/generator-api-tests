@@ -1,19 +1,18 @@
-'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-generator').test;
+import path from 'path';
+import assert from 'yeoman-assert';
+import { test as helpers } from 'yeoman-generator';
 
-describe('generator-api-tests:app', function () {
-  before(function (done) {
+describe('generator-api-tests:app', function suite() {
+  before((done) => {
     helpers.run(path.join(__dirname, '../generators/app'))
-      .withOptions({someOption: true})
-      .withPrompts({someAnswer: true})
+      .withOptions({ someOption: true })
+      .withPrompts({ someAnswer: true })
       .on('end', done);
   });
 
-  it('creates files', function () {
+  it('creates files', () => {
     assert.file([
-      'dummyfile.txt'
+      'dummyfile.txt',
     ]);
   });
 });
