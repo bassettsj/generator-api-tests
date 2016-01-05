@@ -1,6 +1,6 @@
 {
   "name": "generator-api-tests",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Generate scaffolding for api-tests",
   "homepage": "https://github.com/gigwalk-corp/api-tests",
   "author": {
